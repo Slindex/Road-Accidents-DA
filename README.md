@@ -2,15 +2,47 @@
 
 Data Analytics project for the (OMSV) studies center (Buenos Aires - Argentina).
 
-This project seeks to carry out an exploratory analysis of the data provided by the traffic accident study center in Buenos Aires - Argentina. Below is the structure of the content of this readme:
+This project seeks to carry out an exploratory analysis of the data provided by the traffic accident study center in Buenos Aires - Argentina. Additionally, an interactive dashboard is required to analyze data with more depth and to substract valuable insights and recommendations for the OMSV entity. This analysis could lead the decision making process for the Buenos Aires City Government.
+
+Below is the Table of Content:
 
 - [Road-Accidents-DA](#road-accidents-da)
+  - [Technologies](#technologies)
+  - [Project Files](#project-files)
   - [Datasets](#datasets)
     - [Descriptive Metadata](#descriptive-metadata)
       - [Quantitative Variables](#quantitative-variables)
       - [Qualitative Variables](#qualitative-variables)
     - [Null Values Management](#null-values-management)
   - [EDA Structuration](#eda-structuration)
+
+## Technologies
+
+![Python](https://img.shields.io/badge/Python-%23005B60?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-%23005B60?style=for-the-badge&logo=pandas&logoColor=white)
+![Numpy](https://img.shields.io/badge/Numpy-%23005B60?style=for-the-badge&logo=numpy&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-%23005B60?style=for-the-badge&logo=plotly&logoColor=white)
+![GeoPandas](https://img.shields.io/badge/GeoPandas-%23005B60?style=for-the-badge&logo=maplibre&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-%23005B60?style=for-the-badge&logo=jupyter&logoColor=white)
+![Power BI](https://img.shields.io/badge/power%20bi-%23005B60?style=for-the-badge&logo=power%20bi&logoColor=white)
+![.venv](https://img.shields.io/badge/.env-%23005B60?style=for-the-badge&logo=.env&logoColor=white)
+![git](https://img.shields.io/badge/git-%23005B60?style=for-the-badge&logo=git&logoColor=white)
+
+## Project Files
+
+For information related to the files, types and descriptions that compose this project please refer to the following table:
+
+| ID | Name          | Type   | Description                                                           |
+|----|---------------|--------|-----------------------------------------------------------------------|
+| 1  | data          | .xlsx | Contains raw data about road accidents provided by the OMSV|
+| 2  | data/geodata | .shp | Contains a Buenos Aires shape file used for plotting road accidents      |
+| 3  | data/metadata | .xlsx | Contains modified descriptive metadata with detailed information|
+| 4  | .gitignore | .git | Contains ignored virtual environment and testing file|
+| 5  | graphs | .png | Contains images of all graphs used in the EDA analysis|
+| 6  | src | .png | Contains images used as source for this readme file and for the EDA notebook|
+| 7  | EDA | .ipynb | Contains all the EDA process detailed with markdown comments and step by step|
+| 8  | utils | .py | Custom Python functions used in this project|
+| 9  | requirements | .txt | Libraries required for project operation |
 
 ## Datasets
 
@@ -125,3 +157,39 @@ The **CRUCE** column was imputed with the 'SD' tag.
 ## EDA Structuration
 
 <img src="src/road_accidents_map.png" alt="road acc" width="800" height="800" />
+
+<br>
+<br>
+
+The EDA is structured as follows:
+
+* Data Dictionary
+* Quantitative Variables
+  * VAR 1
+    * Descriptive Statistics
+    * Suitable Graph
+    * Box-Plot
+  * VAR 2
+    * Descriptive Statistics
+    * Suitable Graph
+    * Box-Plot
+  * VAR 3
+    * Descriptive Statistics
+    * Suitable Graph
+    * Box-Plot
+  * etc...
+* Qualitative Variables
+  * VAR 1
+    * Graph
+    * Frequency Table
+  * VAR 2
+    * Graph
+    * Frequency Table
+  * VAR 3
+    * Graph
+    * Frequency Table
+  * etc...
+* Insights
+  * Cross Tabulation Heat Map
+
+Some graphs can vary depending on the data analyzed, as we can see in the cover of this section. The graph is plotting all the road accidents in Buenos Aires by their respective longitude and latitude coordenates. Also the design pattern and styles among all graphs is maintained for a clearer data lecture and analysis.
