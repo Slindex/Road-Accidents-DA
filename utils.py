@@ -41,3 +41,20 @@ def replace_all_nulls(df):
         if dtype[0] == float:
             mean = df[column].mean()
             df[column] = df[column].fillna(mean)
+
+
+def freq_table(df, column: str):
+    '''
+    Returns a Frequency table for a given df and column
+    '''
+
+    frequency_table = df[column].value_counts().reset_index()
+    frequency_table.columns = ['Value', 'Frequency']
+
+    total_frequency = frequency_table['Frequency'].sum()
+    total_row = pd.DataFrame({'Value': ['TOTAL'], 'Frequency': [total_frequency]})
+    frequency_table = pd.concat([frequency_table, total_row], ignore_index=True)
+
+    frequency_table['Relative Freq.'] = round((frequency_table['Frequency'] / total_frequency), 2)*100
+
+    return frequency_table
