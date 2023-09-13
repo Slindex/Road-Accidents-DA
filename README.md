@@ -124,4 +124,4 @@ The **CRUCE** column was imputed with the 'SD' tag.
 
 ## EDA Structuration
 
-![road acc map](src/road_accidents_map.png)
+<img src="src/road_accidents_map.png" alt="road acc" width="800" height="800" />
