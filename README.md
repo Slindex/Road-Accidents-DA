@@ -7,14 +7,28 @@ This project seeks to carry out an exploratory analysis of the data provided by 
 Below is the Table of Content:
 
 - [Road-Accidents-DA](#road-accidents-da)
+  - [DashBoard](#dashboard)
   - [Technologies](#technologies)
   - [Project Files](#project-files)
+  - [Data Analytics Techniques](#data-analytics-techniques)
   - [Datasets](#datasets)
     - [Descriptive Metadata](#descriptive-metadata)
       - [Quantitative Variables](#quantitative-variables)
       - [Qualitative Variables](#qualitative-variables)
     - [Null Values Management](#null-values-management)
   - [EDA Structuration](#eda-structuration)
+  - [Ultimate Insights](#ultimate-insights)
+
+## DashBoard
+
+Please visit this [link](https://app.powerbi.com/view?r=eyJrIjoiMjdiNTgwNjEtMTQ3OC00ODY3LTgwNDEtNTUxNmM3Mjk2MDlhIiwidCI6ImFlNTI1NzU3LTg5YmEtNGQzMC1hMmY3LTQ5Nzk2ZWY4YzYwNCIsImMiOjR9) for an interactive view of the dashboard published on the web!
+
+**IMPORTANT:** The GeoSpatial map used (ArcGis) for visualize latitude (Y) and longitude (X) coordinates and other meaningful data is not supported in PowerBI web published reports. Principal reason is I can't afford an ArcGis paid account at the moment. However, I will share in this readme some report images!
+
+![Front](src/dashboard_front.png)
+![Map](src/dashboard_map.png)
+![Stats](src/dashboard_stats.png)
+![KPIs](src/dashboard_kpis.png)
 
 ## Technologies
 
@@ -44,6 +58,19 @@ For information related to the files, types and descriptions that compose this p
 | 8  | utils | .py | Custom Python functions used in this project|
 | 9  | requirements | .txt | Libraries required for project operation |
 
+## Data Analytics Techniques
+
+Next there is a comprehensive list with the Data Analytics techniques used for this project:
+
+* Exploratory Data Analysis (EDA)
+* Univariate Analysis 
+* Multivariate Analysis 
+* Descriptive Statistics 
+* Frequency Distribution Charts and tables 
+* Cross Tabulation Matrixes
+* Box Plots 
+* Measures of Central Tendency and Dispersion
+
 ## Datasets
 
 For this project a dataset with 2 related tables were used. The dataset is a XLSX file with the following Sheet structure:
@@ -56,6 +83,8 @@ For this project a dataset with 2 related tables were used. The dataset is a XLS
   * Glosario
 
 The 'Hechos' and 'Victimas' sheets contains the main information about 696 road accidents occurred from 2016 to 2021. The remaining sheets contain information about the descriptive metadata and a glossary of relevant words. In the following section the dataset descriptive metadata will be showed in detail.
+
+More info: https://data.buenosaires.gob.ar/dataset/victimas-siniestros-viales
 
 ### Descriptive Metadata
 
@@ -193,3 +222,13 @@ The EDA is structured as follows:
   * Cross Tabulation Heat Map
 
 Some graphs can vary depending on the data analyzed, as we can see in the cover of this section. The graph is plotting all the road accidents in Buenos Aires by their respective longitude and latitude coordenates. Also the design pattern and styles among all graphs is maintained for a clearer data lecture and analysis.
+
+## Ultimate Insights
+
+* December was identified as the most deadly month with 76 accidents registered from 2016 to 2021. The avarage number of accidents per month is 57, which indicates that December is 33.33% above the avarage quantity.
+* Avenues were identified as the most deadly road type above Streets and Highways. 62.87% of the victims died in Avenues road accidents. Cars are the main causes, pedestrians and motorcycles are the main victims.
+* The number of accidents dropped significantly from 2018 to 2020 (142 to 76 accidents respectively), being the COVID-19 the main cause.
+* Motorcyclists are the main victims in Highways road accidents, representing a 61% of the total victims in Highways.
+* In Buenos Aires, 1.35 citizens per 100,000 inhabitants suffer a deadly road accident.
+* Only 23.15% of victims were women
+* 108 accidents were caused by passengers affecting pedestrians (15.81%). The main cause is attributed to the context of crime in the city of Buenos Aires, where the most common types of robbery and hitman include a motorcyclist and a companion.
